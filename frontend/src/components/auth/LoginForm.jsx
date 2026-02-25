@@ -1,17 +1,70 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Input from '../common/Input'
 import Button from '../common/Button'
+import { authService } from '../../services/api'
 
 export default function LoginForm({ role }) {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     remember: false
   })
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e) => {
+  const roleHome = {
+    admin: '/admin/dashboard',
+    cuidador: '/caregiver/dashboard',
+    familia: '/family/dashboard'
+  }
+
+  const roleLabel = {
+    admin: 'administrador',
+    cuidador: 'cuidador',
+    familia: 'familia'
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Login attempt:', formData, role)
+    setError('')
+
+    if (!formData.email || !formData.password) {
+      setError('Email y contraseña son obligatorios.')
+      return
+    }
+
+    setLoading(true)
+    try {
+      const response = await authService.login({
+        email: formData.email,
+        password: formData.password
+      })
+
+      const token = response.data?.token
+      const loggedRole = response.data?.usuario?.rol
+
+      if (!token || !loggedRole) {
+        setError('Respuesta de login inválida.')
+        return
+      }
+
+      if (role && loggedRole !== role) {
+        setError(`Este acceso es para ${roleLabel[role] || role}. Tu usuario es ${roleLabel[loggedRole] || loggedRole}.`)
+        return
+      }
+
+      localStorage.setItem('token', token)
+      localStorage.setItem('userRole', loggedRole)
+      localStorage.setItem('user', JSON.stringify(response.data?.usuario || {}))
+
+      navigate(roleHome[loggedRole] || '/')
+    } catch (err) {
+      setError(err?.response?.data?.error || 'No se pudo iniciar sesión. Verifica tus credenciales.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -30,6 +83,12 @@ export default function LoginForm({ role }) {
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
+        {error && (
+          <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-red-700 text-sm">
+            {error}
+          </div>
+        )}
+
         <Input
           label="Email o Usuario"
           type="email"
@@ -71,8 +130,8 @@ export default function LoginForm({ role }) {
           </label>
         </div>
 
-        <Button type="submit" variant="primary" size="lg" className="w-full" icon="login">
-          Ingresar
+        <Button type="submit" variant="primary" size="lg" className="w-full" icon="login" disabled={loading}>
+          {loading ? 'Ingresando...' : 'Ingresar'}
         </Button>
       </form>
 
