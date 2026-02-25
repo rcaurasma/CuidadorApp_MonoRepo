@@ -2,12 +2,11 @@ import Sidebar from '../common/Sidebar'
 
 export default function FamilyLayout({ children, title }) {
   const menuItems = [
-    { icon: 'dashboard', label: 'Inicio', path: '/family/dashboard' },
-    { icon: 'person', label: 'Mi Familiar', path: '/family/paciente' },
-    { icon: 'medical_services', label: 'Cuidadores', path: '/family/cuidadores' },
-    { icon: 'schedule', label: 'Horarios', path: '/family/horarios' },
-    { icon: 'description', label: 'Reportes', path: '/family/reportes' },
-    { icon: 'payments', label: 'Pagos', path: '/family/pagos' }
+    { icon: 'dashboard', label: 'Schedule & Booking', path: '/family/dashboard' },
+    { icon: 'person_add', label: 'Register', path: '/family/register' },
+    { icon: 'medical_information', label: 'Medical Records', path: '/family/medical-records' },
+    { icon: 'history', label: 'History', path: '/family/history' },
+    { icon: 'support_agent', label: 'Support', path: '/family/support' }
   ]
 
   return (

@@ -2,12 +2,12 @@ import Sidebar from '../common/Sidebar'
 
 export default function AdminLayout({ children, title }) {
   const menuItems = [
-    { icon: 'dashboard', label: 'Home', path: '/admin/dashboard' },
+    { icon: 'dashboard', label: 'Overview', path: '/admin/dashboard' },
     { icon: 'groups', label: 'Pacientes', path: '/admin/pacientes' },
     { icon: 'medical_services', label: 'Cuidadores', path: '/admin/cuidadores' },
     { icon: 'schedule', label: 'Turnos', path: '/admin/guardias' },
     { icon: 'description', label: 'Reportes', path: '/admin/reportes' },
-    { icon: 'payments', label: 'Pagos', path: '/admin/pagos' }
+    { icon: 'payments', label: 'Billing', path: '/admin/pagos' }
   ]
 
   return (

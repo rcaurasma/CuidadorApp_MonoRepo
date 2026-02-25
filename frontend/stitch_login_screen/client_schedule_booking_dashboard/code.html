@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Family Schedule &amp; Booking Dashboard</title>
-<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts: Manrope -->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols Outlined -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -40,12 +35,11 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#0d141b] transition-colors duration-200">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Top Navigation Bar -->
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 sticky top-0 z-50">
 <div class="flex items-center gap-8">
 <div class="flex items-center gap-3 text-primary">
 <div class="size-8">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
 </svg>
 </div>
@@ -74,7 +68,6 @@
 </div>
 </header>
 <main class="flex-1 flex w-full max-w-[1440px] mx-auto overflow-hidden bg-background-light dark:bg-background-dark">
-<!-- Left Sidebar: Care Team -->
 <aside class="hidden xl:flex w-72 flex-col border-r border-[#e7edf3] dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shrink-0">
 <div class="flex flex-col gap-1 mb-6">
 <h1 class="text-slate-900 dark:text-white text-lg font-bold">Family Dashboard</h1>
@@ -101,7 +94,6 @@
 <div class="flex flex-col flex-1 overflow-hidden">
 <h2 class="text-[#0d141b] dark:text-white text-sm font-bold uppercase tracking-wider mb-4 px-3">Your Care Team</h2>
 <div class="flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar">
-<!-- Caretaker 1 -->
 <div class="flex items-center gap-3 p-2 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Female caretaker profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVbVUq059SuzmH7EhV2yFSGDE7n6wJgK4hOJEloBVFlQBZAyheUJgsh2pjyrejKXu30uj7Cdyt5DyNUVL5wbfCKinz7_W8HQye7EzLicsI4b-QXXx3PrY-3ZpZ19heZEEYwb3lVIwwhZ6DWmA4Dlxsp0yesOPn-kfmYo8Hm_oDvKUmNWp8kvHBQ7xnGJQUCAp0ITrQBKmNk8BXUiaUOskUozm4ZZRVInDuqwwFf1u9GQSXikAJmq9GfH4jo_24MQdM9Eg4D-xZRcH7");'></div>
 <div class="flex-1 min-w-0">
@@ -112,7 +104,6 @@
 <span class="material-symbols-outlined text-primary text-xl cursor-pointer">chat_bubble</span>
 </div>
 </div>
-<!-- Caretaker 2 -->
 <div class="flex items-center gap-3 p-2 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Male caretaker profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvqLn1jbW0WooH5cmXEeHcNuRDXaZbiZJXmSH3gku9gBOG45iSWheUzGiahwjZ_edCzwGtnZrsk-a7eq8XMTQtgxnCtX9TyQzSuzUyk19BnkSMi42FpfQzXc5SJzCMfwaqttiYhiuTOdVcgmy3cj-0VLe9NAaPodtY4-ObjqhTIykZQBCBtthNg2z3r-zrevIdRUrARp8We6-Xng1EigcyKHxC_V54UO-qHzaRshR-CmL_LE4VrAuXjz2SW_qwqEENSUSr5NoCt7LS");'></div>
 <div class="flex-1 min-w-0">
@@ -123,7 +114,6 @@
 <span class="material-symbols-outlined text-primary text-xl cursor-pointer">chat_bubble</span>
 </div>
 </div>
-<!-- Caretaker 3 -->
 <div class="flex items-center gap-3 p-2 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all opacity-70">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Secondary caretaker profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgExNXdHYcpy4jgs0I9MAz7stuumHjYAzQREE92QG_X0yFV5iRuECyLMLdS4PtjAzI9mErqBVqofLYkilr8NHd4gk09SN_oqAl7pkq7ECNG2nI5K4UiHJY4NBPK1fOmmHOWQvbHkr_j7kNW-vLkVtpV9owwDx6t3-w8JvArFb4zsfQXgFG3KZ5elLulw44kzE1cUWuxplDHkqS7lbgyX35wvzM7CDLhD4jIvXpoUBqEtCFkciA-uXf2XlAnVHxY_fIXmh0cPSccYT6");'></div>
 <div class="flex-1 min-w-0">
@@ -143,7 +133,6 @@
 </button>
 </div>
 </aside>
-<!-- Main Content: Calendar -->
 <section class="flex-1 flex flex-col min-w-0 bg-slate-50 dark:bg-background-dark p-6 overflow-y-auto">
 <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
 <div class="flex flex-col gap-1">
@@ -156,9 +145,7 @@
 <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-md transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
 </div>
 </div>
-<!-- Calendar Grid Container -->
 <div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl border border-[#e7edf3] dark:border-slate-800 shadow-sm overflow-hidden">
-<!-- Weekdays Header -->
 <div class="grid grid-cols-7 border-b border-[#e7edf3] dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
 <div class="py-3 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Sun</div>
 <div class="py-3 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Mon</div>
@@ -168,10 +155,7 @@
 <div class="py-3 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Fri</div>
 <div class="py-3 text-center text-xs font-bold text-slate-500 uppercase tracking-wider">Sat</div>
 </div>
-<!-- Grid Body -->
 <div class="grid grid-cols-7 grid-rows-5 h-[600px]">
-<!-- Days (Mockup for October 2023 starts on Sunday) -->
-<!-- Day 1 -->
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2 flex flex-col gap-2 relative">
 <span class="text-xs font-bold text-slate-400">1</span>
 </div>
@@ -199,7 +183,6 @@
 <div class="border-b border-[#e7edf3] dark:border-slate-800 p-2">
 <span class="text-xs font-bold text-slate-400">7</span>
 </div>
-<!-- Row 2 -->
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2">
 <span class="text-xs font-bold text-slate-400">8</span>
 </div>
@@ -230,7 +213,6 @@
 <div class="border-b border-[#e7edf3] dark:border-slate-800 p-2">
 <span class="text-xs font-bold text-slate-400">14</span>
 </div>
-<!-- Row 3 (Focus Day) -->
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2">
 <span class="text-xs font-bold text-slate-400">15</span>
 </div>
@@ -258,7 +240,6 @@
 <div class="border-b border-[#e7edf3] dark:border-slate-800 p-2">
 <span class="text-xs font-bold text-slate-400">21</span>
 </div>
-<!-- Filling rest of grid... -->
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">22</span></div>
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">23</span></div>
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">24</span></div>
@@ -266,7 +247,6 @@
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">26</span></div>
 <div class="border-r border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">27</span></div>
 <div class="border-b border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">28</span></div>
-<!-- Last Row -->
 <div class="border-r border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">29</span></div>
 <div class="border-r border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">30</span></div>
 <div class="border-r border-[#e7edf3] dark:border-slate-800 p-2"><span class="text-xs font-bold text-slate-400">31</span></div>
@@ -277,17 +257,14 @@
 </div>
 </div>
 </section>
-<!-- Right Sidebar: Upcoming Services -->
 <aside class="hidden lg:flex w-80 flex-col border-l border-[#e7edf3] dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shrink-0">
 <div class="flex items-center justify-between mb-6">
 <h2 class="text-slate-900 dark:text-white text-lg font-bold">Upcoming</h2>
 <span class="text-xs font-bold text-primary uppercase cursor-pointer hover:underline">See All</span>
 </div>
 <div class="flex flex-col gap-6">
-<!-- Date Group -->
 <div class="flex flex-col gap-4">
 <p class="text-[11px] font-bold text-[#4c739a] uppercase tracking-widest border-b border-[#e7edf3] dark:border-slate-800 pb-2">Today, Oct 17</p>
-<!-- Service Item 1 -->
 <div class="flex gap-4 group">
 <div class="flex flex-col items-center">
 <div class="size-2 rounded-full bg-primary mt-1.5"></div>
@@ -303,7 +280,6 @@
 </div>
 </div>
 </div>
-<!-- Date Group 2 -->
 <div class="flex flex-col gap-4">
 <p class="text-[11px] font-bold text-[#4c739a] uppercase tracking-widest border-b border-[#e7edf3] dark:border-slate-800 pb-2">Tomorrow, Oct 18</p>
 <div class="flex gap-4 group">
@@ -321,7 +297,6 @@
 </div>
 </div>
 </div>
-<!-- Date Group 3 -->
 <div class="flex flex-col gap-4">
 <p class="text-[11px] font-bold text-[#4c739a] uppercase tracking-widest border-b border-[#e7edf3] dark:border-slate-800 pb-2">Friday, Oct 20</p>
 <div class="flex gap-4 group">
@@ -348,9 +323,9 @@
 </div>
 </aside>
 </main>
-<!-- Floating Action Button for Mobile -->
 <button class="fixed bottom-6 right-6 lg:hidden size-14 rounded-full bg-primary text-white shadow-xl shadow-primary/40 flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">add</span>
 </button>
 </div>
+
 </body></html>

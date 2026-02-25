@@ -2,12 +2,12 @@ import Sidebar from '../common/Sidebar'
 
 export default function CaregiverLayout({ children, title }) {
   const menuItems = [
-    { icon: 'dashboard', label: 'Inicio', path: '/caregiver/dashboard' },
-    { icon: 'schedule', label: 'Mis Turnos', path: '/caregiver/turnos' },
-    { icon: 'groups', label: 'Mis Pacientes', path: '/caregiver/pacientes' },
-    { icon: 'description', label: 'Reportes', path: '/caregiver/reportes' },
-    { icon: 'payments', label: 'Pagos', path: '/caregiver/pagos' },
-    { icon: 'account_circle', label: 'Mi Perfil', path: '/caregiver/perfil' }
+    { icon: 'dashboard', label: 'Overview', path: '/caregiver/dashboard' },
+    { icon: 'description', label: 'Patient Logs', path: '/caregiver/patient-logs' },
+    { icon: 'warning', label: 'Incidents', path: '/caregiver/incidents' },
+    { icon: 'schedule', label: 'Shift Reports', path: '/caregiver/shift-reports' },
+    { icon: 'payments', label: 'Payroll', path: '/caregiver/payroll' },
+    { icon: 'verified', label: 'Onboarding', path: '/caregiver/onboarding' }
   ]
 
   return (
